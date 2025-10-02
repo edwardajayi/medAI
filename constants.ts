@@ -1,4 +1,3 @@
-
 import { Patient, HealthMetric } from './types';
 
 export const PATIENTS: Patient[] = [
@@ -7,7 +6,10 @@ export const PATIENTS: Patient[] = [
     name: 'Jean Nsengiyumva',
     age: 42,
     gender: 'Male',
-    summary: 'Jean presents with recurring migraines and hypertension. Recent blood pressure readings are elevated. He reports high stress levels from his job. No known allergies. Recommended follow-up in 2 weeks to monitor blood pressure medication efficacy.',
+    diagnosis: 'Hypertension',
+    allergies: ['Penicillin'],
+    medications: [{ name: 'Lisinopril', dosage: '10mg daily' }],
+    summary: 'Jean presents with recurring migraines and hypertension. Recent blood pressure readings are elevated. He reports high stress levels from his job. Recommended follow-up in 2 weeks to monitor blood pressure medication efficacy.',
     history: [
       { id: 'h1', type: 'Consultation', title: 'Hypertension Follow-up', date: '2024-07-15', details: 'BP: 145/92 mmHg. Patient reports stress.' },
       { id: 'h2', type: 'Prescription', title: 'Lisinopril 10mg', date: '2024-07-01', details: 'Prescribed for hypertension.' },
@@ -25,6 +27,9 @@ export const PATIENTS: Patient[] = [
     name: 'Marie Uwimana',
     age: 35,
     gender: 'Female',
+    diagnosis: 'Type 2 Diabetes',
+    allergies: ['None known'],
+    medications: [{ name: 'Metformin', dosage: '500mg twice daily' }],
     summary: 'Marie is a type 2 diabetic, generally well-controlled. Recent A1c is 6.8%. She complains of occasional fatigue. Current medication includes Metformin. She is encouraged to continue her diet and exercise regimen.',
     history: [
       { id: 'h5', type: 'Lab Test', title: 'HbA1c', date: '2024-07-10', details: 'Result: 6.8%. Good control.' },
@@ -42,6 +47,9 @@ export const PATIENTS: Patient[] = [
     name: 'Emmanuel Mugisha',
     age: 58,
     gender: 'Male',
+    diagnosis: 'Asthma',
+    allergies: ['None known'],
+    medications: [{ name: 'Albuterol Inhaler', dosage: 'as needed' }],
     summary: 'Emmanuel has a history of asthma, well-managed with an inhaler. He visited for a routine check-up. Lung sounds are clear. No signs of acute distress. Reminded to use his rescue inhaler as needed and follow up if symptoms worsen.',
     history: [
       { id: 'h8', type: 'Consultation', title: 'Annual Check-up', date: '2024-07-18', details: 'Lungs clear to auscultation. No wheezing.' },
@@ -58,6 +66,9 @@ export const PATIENTS: Patient[] = [
     name: 'Aline Umutesi',
     age: 29,
     gender: 'Female',
+    diagnosis: 'Pregnancy (2nd Trimester)',
+    allergies: ['None known'],
+    medications: [{ name: 'Prenatal Vitamins', dosage: 'one daily' }],
     summary: 'Aline is in her second trimester of pregnancy. All vitals are stable. Fetal heartbeat is strong. She reports mild edema in her ankles. Advised to elevate legs and monitor for any sudden swelling or headaches.',
     history: [
         { id: 'h10', type: 'Consultation', title: 'Prenatal Visit (24 weeks)', date: '2024-07-20', details: 'Weight gain is appropriate. FHR normal.' },

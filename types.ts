@@ -1,7 +1,11 @@
-
 export enum View {
   Doctor = 'Doctor',
   Patient = 'Patient',
+}
+
+export interface ChatMessage {
+  role: 'user' | 'model';
+  content: string;
 }
 
 export interface PatientHistoryItem {
@@ -12,11 +16,19 @@ export interface PatientHistoryItem {
   details: string;
 }
 
+export interface Medication {
+    name: string;
+    dosage: string;
+}
+
 export interface Patient {
   id: number;
   name: string;
   age: number;
   gender: 'Male' | 'Female';
+  diagnosis: string;
+  allergies: string[];
+  medications: Medication[];
   summary: string;
   history: PatientHistoryItem[];
   recommendations: string[];
